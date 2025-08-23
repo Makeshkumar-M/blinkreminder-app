@@ -1,3 +1,12 @@
+# ---------------------------------------------------------------
+# Blink Reminder App
+# Reminds users to blink and rest their eyes at regular intervals.
+# Features:
+#   - Animated GIF popup with eye-care tips
+#   - Snooze and auto-close options
+#   - Gentle sound alert
+#   - System tray integration (pause/resume/exit)
+# ---------------------------------------------------------------
 import tkinter as tk
 import random
 from threading import Thread
@@ -9,9 +18,9 @@ from pystray import Icon, Menu, MenuItem
 GIF_PATH = r"C:\Python Projects\eye_blink.gif"  # Animated GIF
 ICON_PATH = r"C:\Python Projects\icon.ico"      # Tray icon (must be .ico)
 
-REMINDER_INTERVAL = 5 * 60 * 1000 # 20 minutes in ms 20 * 60 * 1000
-SNOOZE_INTERVAL =  5 * 60 * 1000  # 5 minutes in ms 
-AUTO_CLOSE_TIME = 5000             # 10 seconds in ms
+REMINDER_INTERVAL = 20 * 60 * 1000 # 20 minutes in ms
+SNOOZE_INTERVAL =  5 * 60 * 1000  # 5 minutes in ms
+AUTO_CLOSE_TIME = 5000             # 5 seconds in ms
 
 TIPS = [
     "Blink 10 times quickly.",
